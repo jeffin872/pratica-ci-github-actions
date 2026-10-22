@@ -28,7 +28,7 @@ def soma():
             "erro": "Informe os parametros numericos a e b. Ex: ?a=2&b=3"
         }), 400
 
-    resultado = a - b
+    resultado = a + b
 
     # Se o resultado for inteiro (ex: 15.0), devolve 15
     if resultado.is_integer():
