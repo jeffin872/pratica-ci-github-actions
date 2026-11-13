@@ -41,7 +41,7 @@ jobs:
   # JOB 2: seguranca (Shift-Left). Ordem: Secrets -> SAST -> SCA
   # Se um passo falhar, os seguintes NAO executam.
   security-scans:
-    runs-on: runs-on: ubuntu-24.04
+    runs-on: ubuntu-24.04
     needs: lint-and-test
     steps:
       - name: 1. Baixar o codigo com TODO o historico (necessario p/ secrets)
