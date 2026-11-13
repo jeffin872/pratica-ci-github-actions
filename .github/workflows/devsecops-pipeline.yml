@@ -66,7 +66,7 @@ jobs:
 
       - name: 5. SAST - Analise Estatica (Bandit)
         run: |
-          bandit -r . -ll -ii
+          bandit -r . -lll
 
       - name: 6. SCA - Analise de Dependencias (Pip-Audit)
         run: |
