@@ -79,4 +79,8 @@ if __name__ == '__main__':
     # Host e debug vem do ambiente: nada de debug=True nem 0.0.0.0 fixos
     # no codigo (o Bandit acusa os dois). O Dockerfile define
     # FLASK_HOST=0.0.0.0.
-        app.run(host='0.0.0.0', port=5000)
+        app.run(
+        host=os.getenv("FLASK_HOST", "127.0.0.1"),
+        port=int(os.getenv("PORT", "5000")),
+        debug=os.getenv("FLASK_DEBUG", "0") == "1",
+    )   
