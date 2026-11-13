@@ -1,6 +1,5 @@
 # Imagem oficial e enxuta do Python (versao suportada)
-FROM python:3.9-slim
- 
+FROM python:3.12-slim 
 # Aplica as correcoes de seguranca do sistema operacional da imagem base
 RUN apt-get update \
     && apt-get upgrade -y \
