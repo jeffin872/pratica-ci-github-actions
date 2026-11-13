@@ -9,13 +9,13 @@ on:
       - main
 
 env:
-  VERSAO_PYTHON: "3.12"
+  VERSAO_PYTHON: "3.9"
   REGISTRY: ghcr.io
 
 jobs:
   # JOB 1: qualidade basica (Estudo Guiado 01)
   lint-and-test:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - name: 1. Baixar o codigo fonte
         uses: actions/checkout@v4
@@ -41,7 +41,7 @@ jobs:
   # JOB 2: seguranca (Shift-Left). Ordem: Secrets -> SAST -> SCA
   # Se um passo falhar, os seguintes NAO executam.
   security-scans:
-    runs-on: ubuntu-latest
+    runs-on: runs-on: ubuntu-24.04
     needs: lint-and-test
     steps:
       - name: 1. Baixar o codigo com TODO o historico (necessario p/ secrets)
