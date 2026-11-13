@@ -9,7 +9,7 @@ on:
       - main
 
 env:
-  VERSAO_PYTHON: "3.9"
+  VERSAO_PYTHON: "3.10"
   REGISTRY: ghcr.io
 
 jobs:
